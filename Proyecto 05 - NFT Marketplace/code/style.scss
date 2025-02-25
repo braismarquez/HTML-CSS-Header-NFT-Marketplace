@@ -1,0 +1,261 @@
+
+@mixin button() {
+    display: inline-block;
+    background-color: $red;
+    color: white;
+    padding: 8px 30px;
+    text-decoration: none;
+    &:hover {
+        background-color: darken($red, 0.2);
+    }
+}
+
+
+$gris-bg: #2E2F38;
+$gris-claro: #8E8E8E;
+$red: #FA504D;
+
+$font-title: 'Belgrano', serif;
+$font-normal: 'Poppins', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-normal;
+    font-size: 16px;
+    min-height: 100vh;
+    &::before{
+        content: '';
+        width: 42%;
+        background-color: $gris-bg;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    a {
+        text-decoration: none;
+    }
+}
+
+.circle{
+    background-image: url(img/Vector.svg);
+    position: absolute;
+}
+
+.menu {
+    margin-left: 130px;
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 56px;
+        a {
+            color: $gris-bg;
+            font-weight: 300;
+        }
+    }
+}
+
+.botones {
+    margin-left: auto;
+    ul {
+        list-style: none;
+        align-items: center;
+        display: flex;
+        gap: 27px;
+        a{
+            color: white;
+        }
+    }
+    .button {
+        @include button();
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.hero{
+    grid-column: 1 / span 1;
+    margin-bottom: 20px;
+    padding-top: 50px;
+    h1 {
+        font-family: $font-title;
+        font-size: 55px;
+        font-weight: 400;
+        padding-right: 40px;
+        line-height: 65px;
+        margin-bottom: 30px;
+    }
+    &_subtitle{
+        color: $gris-claro;
+        font-weight: 300;
+        font-size: 20px;
+        margin-bottom: 20px;
+        &::before{
+            content: '';
+            width: 60px;
+            height: 3px;
+            background-color: $red;
+            position: absolute;
+            top: 398px;
+        }
+    }
+    &_links {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        &-1{
+            @include button();
+            padding: 12px 60px;
+        }
+        &-2{
+            color: $gris-bg;
+            font-weight: 300;
+        }
+    }
+}  
+
+.circle{
+    position: absolute;
+    top: 22%;
+    left: 280px;
+    width: 14%;
+}
+
+.detalles {
+    grid-column: 1 / span 1;
+    padding-right: 40px;
+
+    h2{
+        font-family: $font-title;
+        margin-bottom: 20px;
+    }
+
+    &_img {
+        display: flex;
+        justify-content: space-between;
+        img{
+            width: 48%;
+            border: 1px solid $gris-claro;
+            padding: 4px;
+        }
+    }
+}
+
+.nft {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    &_imagecontainer {
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &_data {
+        padding: 16px;
+        background-color: white;
+        margin-top: -30px;
+        position: relative;
+        margin-bottom: 40px;
+    }
+
+    &_header {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid black;
+    }
+
+    &_owner {
+        display: flex;
+        &_data{
+            margin-left: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+    &_username {
+        color: $gris-claro;
+        font-weight: 300;
+    }
+
+    &_name{
+        font-weight: bold;
+    }
+
+    &_price {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &-current{
+            color: $gris-claro;
+        }
+        &-number{
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+    &_buttons{
+        justify-content: space-between;
+        display: flex;
+        a.btn {
+            @include button();
+            padding: 10px 50px;
+            &:last-child{
+                color: $red;
+                background-color: transparent;
+            }
+        }
+    }
+
+    &_numbers {
+        display: flex;
+        color: white;
+        justify-content: space-between;
+        font-weight: 300;
+    }
+
+    &_number {
+        color: $red;
+        font-size: 30px;
+        font-weight: 500;
+    }
+}
+
+.palabra{
+    position: absolute;
+    color: white;
+    top: 10%;
+    right: 0;
+    width: 250px;
+    height: 700px;
+}

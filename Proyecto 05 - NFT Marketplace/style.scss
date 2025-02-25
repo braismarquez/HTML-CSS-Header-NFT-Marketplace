@@ -1,0 +1,69 @@
+$gris-bg: #2E2F38;
+
+$font-title: 'Belgrano', serif;
+$font-normal: 'Poppins', sans-serif;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-normal;
+    &:before
+    {
+        content: "";
+        width: 42%;
+        background-color: $gris-bg;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+}
+
+.container{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    a {
+        text-decoration: none;
+    }
+}
+
+.menu {
+    margin-left: 130px;
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 50px;
+        a {
+            color: $gris-bg;
+        }
+    }
+}
+
+.botones {
+    margin-left: auto;
+
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 27px;
+        a{
+            color: white;
+        }
+    }
+}

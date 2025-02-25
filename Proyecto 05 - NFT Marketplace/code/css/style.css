@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+}
+body::before {
+  content: "";
+  width: 42%;
+  background-color: #2E2F38;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+header a {
+  text-decoration: none;
+}
+
+.circle {
+  background-image: url(img/Vector.svg);
+  position: absolute;
+}
+
+.menu {
+  margin-left: 130px;
+}
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 56px;
+}
+.menu ul a {
+  color: #2E2F38;
+  font-weight: 300;
+}
+
+.botones {
+  margin-left: auto;
+}
+.botones ul {
+  list-style: none;
+  align-items: center;
+  display: flex;
+  gap: 27px;
+}
+.botones ul a {
+  color: white;
+}
+.botones .button {
+  display: inline-block;
+  background-color: #FA504D;
+  color: white;
+  padding: 8px 30px;
+  text-decoration: none;
+}
+.botones .button:hover {
+  background-color: #fa4f4c;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.hero {
+  grid-column: 1/span 1;
+  margin-bottom: 20px;
+  padding-top: 50px;
+}
+.hero h1 {
+  font-family: "Belgrano", serif;
+  font-size: 55px;
+  font-weight: 400;
+  padding-right: 40px;
+  line-height: 65px;
+  margin-bottom: 30px;
+}
+.hero_subtitle {
+  color: #8E8E8E;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.hero_subtitle::before {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: #FA504D;
+  position: absolute;
+  top: 398px;
+}
+.hero_links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.hero_links-1 {
+  display: inline-block;
+  background-color: #FA504D;
+  color: white;
+  padding: 8px 30px;
+  text-decoration: none;
+  padding: 12px 60px;
+}
+.hero_links-1:hover {
+  background-color: #fa4f4c;
+}
+.hero_links-2 {
+  color: #2E2F38;
+  font-weight: 300;
+}
+
+.circle {
+  position: absolute;
+  top: 22%;
+  left: 280px;
+  width: 14%;
+}
+
+.detalles {
+  grid-column: 1/span 1;
+  padding-right: 40px;
+}
+.detalles h2 {
+  font-family: "Belgrano", serif;
+  margin-bottom: 20px;
+}
+.detalles_img {
+  display: flex;
+  justify-content: space-between;
+}
+.detalles_img img {
+  width: 48%;
+  border: 1px solid #8E8E8E;
+  padding: 4px;
+}
+
+.nft {
+  grid-column: 2/span 1;
+  grid-row: 1/span 2;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.nft_imagecontainer img {
+  max-width: 100%;
+}
+.nft_data {
+  padding: 16px;
+  background-color: white;
+  margin-top: -30px;
+  position: relative;
+  margin-bottom: 40px;
+}
+.nft_header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+.nft_owner {
+  display: flex;
+}
+.nft_owner_data {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.nft_username {
+  color: #8E8E8E;
+  font-weight: 300;
+}
+.nft_name {
+  font-weight: bold;
+}
+.nft_price {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.nft_price-current {
+  color: #8E8E8E;
+}
+.nft_price-number {
+  font-weight: bold;
+  font-size: 20px;
+}
+.nft_buttons {
+  justify-content: space-between;
+  display: flex;
+}
+.nft_buttons a.btn {
+  display: inline-block;
+  background-color: #FA504D;
+  color: white;
+  padding: 8px 30px;
+  text-decoration: none;
+  padding: 10px 50px;
+}
+.nft_buttons a.btn:hover {
+  background-color: #fa4f4c;
+}
+.nft_buttons a.btn:last-child {
+  color: #FA504D;
+  background-color: transparent;
+}
+.nft_numbers {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  font-weight: 300;
+}
+.nft_number {
+  color: #FA504D;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.palabra {
+  position: absolute;
+  color: white;
+  top: 10%;
+  right: 0;
+  width: 250px;
+  height: 700px;
+}/*# sourceMappingURL=style.css.map */
